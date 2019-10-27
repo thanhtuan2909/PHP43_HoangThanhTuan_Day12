@@ -22,16 +22,7 @@ print_r($values);
 echo "</pre>";
 
 echo "<h2>mảng thứ 3 từ 2 mảng trên</h2>";
-$keysAndValues = [];
-////Sử dụng for
-//for ($i = 1; $i <= count($keys); $i++) {
-//    $keysAndValues += [$keys['field'.$i] => $values['field'.$i.'value']];
-//}
-////Sử dụng foreach
-foreach ($keys as $k => $val) {
-    $keysAndValues += [$keys[$k] => $values[$k.'value']];
-}
-
+$keysAndValues = array_combine($keys, $values);
 
 echo "<pre>";
 print_r($keysAndValues);
